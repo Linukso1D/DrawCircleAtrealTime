@@ -6,12 +6,17 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 public class MainActivity extends Activity {
     DrawView drawView;
@@ -28,9 +33,12 @@ Context MyCont;
         ScreenMetr metrics=ScreenMetr.getInstance();
         metrics.initDisplay(densityDpi,width,height);
         drawView=new DrawView(MyCont);
+
         setContentView(drawView);
 
 
 
     }
+
+
 }
